@@ -6,4 +6,6 @@
 @theme {
   --color-primary: #7d1c1b;
   --color-primary-hover: #a12b2a;
+  --color-secondary: #ffe6e4;
+  --color-tertiary: #cab66f;
 }
