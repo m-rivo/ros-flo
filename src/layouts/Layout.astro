@@ -1,6 +1,8 @@
 ---
  import './src/styles/global.css'
  import Navbar from "../components/Navbar.astro"
+ import Footer from "../components/Footer.astro"
+ import { TITULO } from "../constants"
 ---
 
 <html lang="en">
@@ -9,11 +11,12 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Rosaura Flores</title>
+		<title>{TITULO}</title>
 	</head>
 	<body>
         <Navbar />
         <slot />
+		<Footer />
 	</body>
 </html>
 
