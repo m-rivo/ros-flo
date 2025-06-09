@@ -1,0 +1,44 @@
+---
+
+const services = [
+  {
+    icon: '🚀', // Puedes usar íconos SVG o de librerías como Font Awesome/Lucide Icons
+    title: 'Odontología Integral',
+    description: 'Creamos sitios web modernos y escalables, optimizados para una experiencia de usuario excepcional y un rendimiento rápido.'
+  },
+  {
+    icon: '✨',
+    title: 'Endodoncia',
+    description: 'Diseñamos interfaces intuitivas y atractivas que mejoran la interacción del usuario y la satisfacción general.'
+  },
+  {
+    icon: '📈',
+    title: 'Ortodoncia',
+    description: 'Implementamos estrategias de SEO, SEM y redes sociales para aumentar tu visibilidad y atraer a tu público objetivo.'
+  },
+  {
+    icon: '💡',
+    title: 'Estética',
+    description: 'Ofrecemos asesoramiento experto para ayudarte a tomar decisiones informadas sobre tecnología y optimizar tus procesos.'
+  }
+];
+---
+
+<section id="servicios" class="py-16">
+  <div class="container mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-12 text-primary">Nuestros Servicios</h2>
+    <p class="text-xl text-center text-gray-700 mb-16 max-w-2xl mx-auto">
+      Explora la gama completa de soluciones que ofrecemos para ayudarte a alcanzar tus objetivos y potenciar tu negocio.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {services.map(service => (
+        <div class="bg-white rounded-lg shadow-md p-8 text-center transition duration-300 ease-in-out hover:shadow-xl hover:-translate-y-1">
+          <div class="text-5xl mb-6">{service.icon}</div> {/* Ícono */}
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">{service.title}</h3> {/* Título */}
+          <p class="text-gray-700">{service.description}</p> {/* Descripción */}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
