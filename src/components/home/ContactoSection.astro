@@ -1,0 +1,58 @@
+---
+//import { Icon } from 'astro-icon'; // Asegúrate de tener astro-icon instalado
+
+const address = 'Tegucigalpa, Francisco Morazán, Honduras'; // Dirección
+const phoneNumber = '+504 2235-4141'; // Número de teléfono (ejemplo)
+const socialMediaLinks = [ // Enlaces a redes sociales (ejemplos)
+  { name: 'Facebook', url: 'https://www.facebook.com/Tegucigalpa' },
+  { name: 'Twitter', url: 'https://twitter.com/Tegucigalpa' },
+  { name: 'Instagram', url: 'https://www.instagram.com/Tegucigalpa' },
+];
+const email = 'info@tegucigalpa.hn'; // Correo electrónico (ejemplo)
+---
+
+<section id="contacto" class="py-16 text-center lg:text-left">
+  <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+
+    {/* Información de Contacto (Izquierda) */}
+    <div>
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">Ponte en Contacto</h2>
+
+      <div class="mb-4">
+        <h3 class="text-lg font-semibold text-gray-700">Dirección</h3>
+        <p class="text-gray-700">{address}</p>
+      </div>
+
+      <div class="mb-4">
+        <h3 class="text-lg font-semibold text-gray-700">Teléfono</h3>
+        <p class="text-gray-700">
+          <a href={`tel:${phoneNumber}`} class="hover:text-indigo-600 transition duration-300">{phoneNumber}</a>
+        </p>
+      </div>
+
+      <div class="mb-4">
+        <h3 class="text-lg font-semibold text-gray-700">Redes Sociales</h3>
+        <div class="flex gap-4">
+          {socialMediaLinks.map(link => (
+            <a href={link.url} target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-indigo-600 transition duration-300">
+              {link.name}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold text-gray-700">Correo Electrónico</h3>
+        <p class="text-gray-700">
+          <a href={`mailto:${email}`} class="hover:text-indigo-600 transition duration-300">{email}</a>
+        </p>
+      </div>
+    </div>
+
+    {/* Mapa (Derecha) */}
+    <div>
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">Mapa</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.2899862929103!2d-87.22977737490409!3d14.06004583636469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6f976a63220f33%3A0xecbbf7ecdbde7ce7!2sVentu%20Life%20Center!5e0!3m2!1sde!2shn!4v1749416446454!5m2!1sde!2shn" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-lg"></iframe>
+    </div>
+  </div>
+</section>
