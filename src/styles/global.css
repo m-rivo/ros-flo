@@ -9,3 +9,7 @@
   --color-secondary: #ffe6e4;
   --color-tertiary: #cab66f;
 }
+
+html {
+  scroll-behavior: smooth;
+}
